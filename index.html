@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUR ARM</title>
+    <link rel="icon" href="./img/fav/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class="header">
+        <div class="container">
+            <h1 class="header-title">Пневматична гвинтівка Beeman</h1>
+            <div class="order">
+                <div class="order-img">
+                    <img src="./img/photo_2024-10-17_23-33-42.jpg" alt="гвинтівка">
+                    <div class="discount-ribbon">25% знижка</div>
+                </div>
+                
+                <div class="order-price">
+                    <div class="price-wrapper">
+                        <div class="order-price__old">
+                            <span class="price-label">Стара ціна:</span>
+                            <span class="price-value"><del>6599грн</del></span>
+                        </div>
+                        <div class="order-price__new">
+                            <span class="price-label">Акційна ціна:</span>
+                            <span class="price-value">4999грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="timer">
+        <div class="container">
+            <div class="timer-wrap">
+                <h2>Залишилось: <span class="highlight">5</span> шт.</h2>
+                <div id="countdown">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+                <div id="time-labels">
+                    <span>Годин</span><span>Хвилин</span><span>Секунд</span>
+                </div>
+                <button id="scrollButton" class="order-button">Оформити замовлення</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="features-section">
+        <h2>Особливості товару</h2>
+        <ul class="features-list">
+            <li>
+                <div class="icon">🎯</div>
+                <div class="details">
+                    <strong>Висока точність:</strong> Забезпечує максимальну точність на різні дистанції.
+                </div>
+            </li>
+            <li>
+                <div class="icon">⚙️</div>
+                <div class="details">
+                    <strong>Потужний механізм:</strong> Висока швидкість кулі для ефективної стрільби.
+                </div>
+            </li>
+            <li>
+                <div class="icon">💪</div>
+                <div class="details">
+                    <strong>Зручний дизайн:</strong> Ергономічна конструкція для тривалого використання.
+                </div>
+            </li>
+            <li>
+                <div class="icon">🔒</div>
+                <div class="details">
+                    <strong>Надійність:</strong> Виготовлено з високоякісних матеріалів для довговічної експлуатації.
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section id="slider" class="slider-section">
+        <h2>Галерея товару</h2>
+        <div class="main-content">
+            <div class="slider">
+                <div class="slides">
+                    <img src="./img/photo_2024-10-17_23-34-25.jpg" alt="Slide 1">
+                    <img src="./img/photo_2024-10-17_23-34-14.jpg" alt="Slide 2">
+                    <img src="./img/photo_2024-10-17_23-34-10.jpg" alt="Slide 3">
+                    <img src="./img/photo_2024-10-17_23-34-07.jpg" alt="Slide 4">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+        
+    </div>
+    </section>
+    <section id="advantages" class="advantages-section">
+        <h2>Переваги</h2>
+        <ul class="advantages-list">
+            <li>
+                <div class="icon">🚀</div>
+                <div class="details">
+                    <strong>Швидкість доставки:</strong> Ваше замовлення буде доставлено швидко та надійно в будь-який куточок країни.Ми гарантуємо оперативність і надійність.</div>
+            </li>
+            <li>
+                <div class="icon">🎁</div>
+                <div class="details">
+                    <strong>Подарунки та бонуси:</strong> Оптичний приціл і набір куль – БЕЗКОШТОВНО в подарунок з кожною покупкою! В інших магазинах вам доведеться купувати це окремо.
+                </div>
+            </li>
+            <li>
+                <div class="icon">🔥</div>
+                <div class="details">
+                    <strong>Ексклюзивні умови:</strong> Ми є офіційними представниками бренду, тому гарантуємо оригінальність та найкращу ціну.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Відгуки -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2>Відгуки задоволених клієнтів</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <img src="./img/reviews/reviews_photo1.jpg" alt="Іван" class="review-avatar">
+                    <div class="review-content">
+                        <p class="review-text">"Чудовий продукт, рекомендую всім! Якість на вищому рівні, а точність просто вражає."</p>
+                        <p class="review-author">— Іван, професійний стрілець</p>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <img src="./img/reviews/reviews_photo2.jpg" alt="Євген" class="review-avatar">
+                    <div class="review-content">
+                        <p class="review-text">"Дуже зручно і якісно, дякую! Обслуговування на найвищому рівні, доставка швидка."</p>
+                        <p class="review-author">— Євген, любитель стрільби</p>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <img src="./img/reviews/reviews_photo3.jpg" alt="Петро" class="review-avatar">
+                    <div class="review-content">
+                        <p class="review-text">"Найкраща покупка цього року! Гвинтівка перевершила всі мої очікування. Дякую за чудовий сервіс!"</p>
+                        <p class="review-author">— Петро, мисливець</p>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Як замовити товар -->
+    <!-- Підключіть Font Awesome в <head> вашого HTML документа -->
+
+
+        <section class="order1_section">
+            <div class="container">
+                <h2 class="order1-title">Як замовити товар?</h2>
+                <div class="order_steps1">
+                    <div class="step_item">
+                        <div class="step_wrapper">
+                            <i class="fas fa-pencil-alt step-icon"></i>
+                            <h4>Заявка</h4>
+                            <p>Заповніть форму на сайті</p>
+                        </div>
+                    </div>
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="step_item">
+                        <div class="step_wrapper">
+                            <i class="fas fa-phone-alt step-icon"></i>
+                            <h4>Дзвінок</h4>
+                            <p>Наш менеджер зателефонує для уточнення деталей</p>
+                        </div>
+                    </div>
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="step_item">
+                        <div class="step_wrapper">
+                            <i class="fas fa-truck step-icon"></i>
+                            <h4>Відправка</h4>
+                            <p>Доставляємо ваш товар протягом<br>1-2 днів</p>
+                        </div>
+                    </div>
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="step_item">
+                        <div class="step_wrapper">
+                            <i class="fas fa-hand-holding-usd step-icon"></i>
+                            <h4>Отримання</h4>
+                            <p>Сплачуєте товар переказом на банківську картку або при отриманні</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    
+    
+    <section id="order-form">
+        <h1 class="header-title">Пневматична гвинтівка Beeman</h1>
+            <div class="order">
+                <div class="order-img">
+                    <img src="./img/photo_2024-10-17_23-33-54.jpg" alt="гвинтівка">
+                    <div class="discount-ribbon">25% знижка</div>
+                </div>
+                
+                <div class="order-price">
+                    <div class="price-wrapper">
+                        <div class="order-price__old">
+                            <span class="price-label">Стара ціна:</span>
+                            <span class="price-value"><del>6599грн</del></span>
+                        </div>
+                        <div class="order-price__new">
+                            <span class="price-label">Акційна ціна:</span>
+                            <span class="price-value">4999грн</span>
+                        </div>
+                    </div>
+                </div>
+        <form id="orderForm">
+            <!-- <label for="phone">Телефон:</label> -->
+            <input type="text" id="phone" name="phone" placeholder="Телефон" maxlength="13" required>
+
+            <!-- <label for="name">Ім’я:</label> -->
+            <input type="text" id="name" name="name" placeholder="Ім’я" maxlength="50" required>
+
+            <button type="submit">Оформити замовлення</button>
+        </form>
+    </section>
+    
+    
+    
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const TOKEN = "7872932457:AAGFCkJlFRBvKav1uA8zfiKRd1bKMf9TETk";
+        const CHAT_ID = "1067816217";
+        const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+        const success = document.getElementById('success');
+
+            document.getElementById('orderForm').addEventListener('submit', function(e){
+                e.preventDefault();
+
+                const nameField = this.name;
+                const phoneField = this.phone;
+
+                const namePattern = /^[A-Za-zА-Яа-яЁёІіЇїЄє\s]+$/;
+                const phonePattern = /^\d{10}$/;
+
+                if (!namePattern.test(nameField.value)) {
+                    alert('Будь ласка, введіть тільки букви в полі "Імя".');
+                    return;
+                }
+
+                if (!phonePattern.test(phoneField.value)) {
+                    alert('Будь ласка, введіть номер тел. у форматі 0XXXXXXXXX".');
+                    return;
+                }
+
+                let message = `<b>Дай Боже вуйко! Замовлення прийшло!!!</b>\n`;
+                message += `<b>Замовник: </b> ${ this.name.value }\n`;
+                message += `<b>Номер: </b> ${ this.phone.value }`;
+
+                axios.post(URI_API, {
+                    chat_id: CHAT_ID,
+                    parse_mode: 'html',
+                    text: message
+                })
+                .then((res) => {
+                    this.name.value = "";
+                    this.phone.value = "";
+                    success.innerHTML = "Повідомлення відправлено!"
+                    success.style.display = "block"
+                })
+                .catch((err) => {
+                    console.warn(err);
+                    
+                })
+                .finally(() => {
+                    console.log("The end");
+                    
+                })
+            })
+    </script>
+
+</body>
+</html>

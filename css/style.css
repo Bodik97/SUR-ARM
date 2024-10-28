@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    max-width: 767px; /* Максимальна ширина сайту, наприклад, 768px для планшета */
+    margin: 0 auto; /* Центрує вміст на великих екранах */
+    overflow-x: hidden; /* Прибирає горизонтальну прокрутку */
+}
+h1 {
+    text-align: center; /* Центрує текст по горизонталі */
+    font-size: 2em; /* Базовий розмір шрифту */
+    margin: 0 auto; /* Відступи зверху та знизу */
+}
+h2 {
+    text-align: center; /* Центрує текст по горизонталі */
+    font-size: 2em; /* Базовий розмір шрифту */
+    margin-bottom: 30px;/* Відступи зверху та знизу */;
+    color: #333;  /* Червоний колір для цифри */
+    font-weight: bold; /* Жирний шрифт */
+    font-size: 48px;
+}
+
+.header-title {
+    
+    font-size: 36px; /* Розмір шрифту */
+    font-weight: bold; /* Жирність тексту */
+    color: #ffffff; /* Колір тексту */
+    text-align: center; /* Вирівнювання заголовка по центру */
+    letter-spacing: 1px; /* Міжлітерний інтервал */
+    text-transform: uppercase; /* Трансформація тексту до великих літер */
+    line-height: 1.5; /* Висота рядка */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #e74c3c;
+
+}
+.order {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.order-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.discount-ribbon {
+    position: absolute;
+    top: 80px;
+    right: -80px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 0;
+    width: 390px;
+    text-align: center;
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.order-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.order-price {
+    width: 90%;
+    background: linear-gradient(135deg, #915a5a, #424547);
+    border: 2px solid #9b5959;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-price:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.price-wrapper {
+    display: flex;
+    justify-content: space-evenly; /* Вирівнювання елементів по горизонталі */
+    align-items: center;
+}
+
+.order-price__old, .order-price__new {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.price-label {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.price-value {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.order-price__old .price-value {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.order-price__new .price-value {
+    color: #e74c3c;
+    font-size: 42px;
+}
+
+/* Додамо анімацію для нової ціни */
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.order-price__new .price-value {
+    animation: pulsate 2s infinite;
+}
+
+.timer-wrap h2 {
+    color: #333;  /* Червоний колір для цифри */
+    font-weight: bold; /* Жирний шрифт */
+    font-size: 24px;
+}
+.highlight {
+    width: 10px;
+    color: #e74c3c; /* Червоний колір для цифри */
+    font-weight: bold; /* Жирний шрифт */
+    font-size: 40px; /* Збільшений розмір шрифту */
+    
+}
+
+#timer {
+    text-align: center; /* Центруємо текст */
+    padding: 20px; /* Відступи всередині секції */
+    background-color: #f4f4f9; /* Світлий фон */
+    border-radius: 5px; /* Закруглені кути */
+}
+
+#countdown {
+    font-size: 89px; /* Розмір шрифту для таймера */
+    font-weight: bold; /* Жирний шрифт */
+    margin: 15px 0; /* Відступи */
+    text-align: center;
+    color: #ff4b4b
+}
+#countdown span {
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*додаю легку тінь*/
+
+    display: inline-block;
+    animation: tick 1s ease infinite;
+}
+#time-labels {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#time-labels span {
+    margin: 0 17px; /* Відстань між підписами */
+    font-size: 36px; /* Розмір тексту підписів */
+    color: #333; /* Колір тексту підписів */
+}
+
+@keyframes tick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); } /* Збільшує цифри під час зміни */
+    100% { transform: scale(1); }
+}
+#hours, #minutes, #seconds {
+    font-weight: bold;
+}
+
+#hours {
+    color:  #ff4b4b; /* Синій для годин */
+}
+
+#minutes {
+    color:  #ff4b4b; /* Зелений для хвилин */
+}
+
+#seconds {
+    color:  #ff4b4b; /* Червоний для секунд */
+}
+.timer-title {
+    margin-top: 30px;
+    text-align: center;
+}
+.timer-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.order-button {
+    width: 90%;
+    background: linear-gradient(45deg, #db3535, #1e2020); /* Градієнт */
+    border: none;
+    padding: 12px 25px;
+    font-size: 36px;
+    color: #fff;
+    border-radius: 30px; /* Закруглені краї */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Плавний перехід при наведенні */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Тінь */
+}
+
+.order-button:hover {
+    background: linear-gradient(45deg, #f3edef, #b90404); /* Зміна градієнту при наведенні */
+    transform: scale(1.05); /* Легке збільшення */
+}
+.order-button:active {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Зменшується тінь при натисканні */
+    transform: translateY(2px); /* Легке зміщення вниз */
+}
+.features-section {
+    background-color: #f4f4f9;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* .features-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+} */
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.features-list li:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 40px;
+    margin-right: 20px;
+    color: #ff7a59;
+    flex-shrink: 0;
+}
+
+.details {
+    text-align: left;
+}
+
+.details strong {
+    display: block;
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.details {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.slider-section {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #f4f4f9;
+}
+
+/* .slider-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+} */
+
+
+.main-content {
+    display: flex;
+    justify-content: center;  /* Центруємо по горизонталі */
+    align-items: center;      /* Центруємо по вертикалі */
+    min-height: 100vh;        /* Займаємо всю висоту екрану */
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.advantages-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+}
+
+.advantages-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.advantages-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.details strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.details {
+    font-size: 16px;
+    color: #666;
+}
+.order1_section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.order1_section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.order1_section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.order1-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.order1-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e74c3c;
+    margin: 20px auto 0;
+}
+
+.order_steps1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.step_item {
+    flex: 1;
+    min-width: 200px;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+.step_item:hover {
+    transform: translateY(-10px);
+}
+
+.step_wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.step_wrapper:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.step-icon {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.step_wrapper h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step_wrapper p {
+    font-size: 16px;
+    color: #666;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.step_item {
+    animation: float 4s ease-in-out infinite;
+}
+
+.step_item:nth-child(1) { animation-delay: 0s; }
+.step_item:nth-child(3) { animation-delay: 1s; }
+.step_item:nth-child(5) { animation-delay: 2s; }
+.step_item:nth-child(7) { animation-delay: 3s; }
+
+
+.reviews-section {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+}
+
+.reviews-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.review-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-rating {
+    color: #ffd700;
+    margin-top: 10px;
+}
+
+#order-form {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 40px 0px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#order-form h2 {
+    color: #e74c3c;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#order-form h2 {
+    /* color: #e74c3c; */
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#orderForm {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 20px;
+}
+
+#orderForm label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#orderForm input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#orderForm input:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+#orderForm button {
+    width: 100%;
+    background: linear-gradient(45deg, #db3535, #1e2020); /* Градієнт */
+    border: none;
+    padding: 12px 25px;
+    font-size: 36px;
+    color: #fff;
+    border-radius: 30px; /* Закруглені краї */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Плавний перехід при наведенні */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Тінь */
+}
+
+#orderForm button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+#orderForm button:active {
+    transform: translateY(0);
+}
+
+/* @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+} */
+
+#order-form h2 {
+    animation: pulse 2s infinite;
+}
+
+#orderForm input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+#orderForm input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+#orderForm input::-webkit-input-placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+#orderForm input::-moz-placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+#orderForm input:-ms-input-placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+

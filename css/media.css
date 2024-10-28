@@ -1,0 +1,188 @@
+@media (max-width: 768px) {
+    /* Налаштування для планшетів */
+    body {
+        max-width: 100%; /* Повна ширина на планшетах */
+    }
+    h1 {
+        font-size: 1.8em; /* Трохи зменшуємо розмір шрифту */
+    }
+    .discount-ribbon {
+        font-size: 30px;
+        top: 105px;
+        right: -100px;
+        width: 430px;
+    }
+    .order-price {
+        padding: 15px;
+    }
+
+    .order-price__old, .order-price__new {
+        padding: 12px;
+        max-width: 250px;
+    }
+    
+    .features-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .icon {
+        margin-bottom: 10px;
+    }
+    .advantages-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantages-list li {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .title {
+        font-size: 1.5em; /* Зменшити розмір заголовка */
+    }
+
+    .order_steps1 {
+        flex-direction: column;
+    }
+    
+    .step_item {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+    /* #order-form {
+        max-width: 100%;
+        padding: 30px 15px;
+    } */
+
+    #order-form h2 {
+        font-size: 22px;
+    }
+
+    .product-image {
+        max-width: 80%;
+    }
+
+    #orderForm input,
+    #orderForm button {
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 480px) {
+    /* Налаштування для мобільних телефонів */
+    body {
+        max-width: 100%; /* Повна ширина на мобільних */
+    }
+    h1 {
+        font-size: 1.5em; /* Ще більше зменшуємо шрифт для зручності */
+        padding: 0 10px; /* Додаємо горизонтальні відступи для більш естетичного вигляду */
+    }
+    .discount-ribbon {
+        font-size: 22px;
+        top: 65px;
+        right: -90px;
+        width: 320px;
+    }
+    .order-price {
+        padding: px;
+        gap: 8px;
+    }
+    .order-price__old, .order-price__new {
+        padding: 10px;
+        font-size: 14px; /* Зменшення шрифту для мобільних */
+        max-width: 200px;
+    }
+    #countdown {
+        font-size: 64px; /* Розмір шрифту для таймера */
+    }
+    #time-labels span{
+        font-size: 26px; /* Розмір тексту підписів */
+    }
+    .title {
+        font-size: 1.2em; /* Ще більше зменшити заголовок для дуже малих екранів */
+    }
+    .order1-title {
+        font-size: 28px;
+    }
+    
+    .step_wrapper {
+        padding: 20px 15px;
+    }
+    
+    .step-icon {
+        font-size: 32px;
+    }
+    
+    .step_wrapper h4 {
+        font-size: 18px;
+    }
+    
+    .step_wrapper p {
+        font-size: 14px;
+    }
+    /* #order-form {
+        max-width: 100%;
+        padding: 20px 10px;
+        margin: 0 auto;
+    } */
+
+    #order-form h2 {
+        font-size: 20px;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+
+    #orderForm label {
+        font-size: 14px;
+    }
+
+    #orderForm input,
+    #orderForm button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+@media (max-width: 320px){
+    .header-title {
+        font-size: 30px;
+    }
+    #time-labels span{
+        font-size: 20px; /* Розмір тексту підписів */
+    }
+    .order-img {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .order-price__new .price-value {
+        font-size: 32px;
+    }
+    .order-price__old .price-value {
+        font-size: 24px;
+    }
+    .discount-ribbon {
+        font-size: 14px;
+        top: 28px;
+        /* right: -90px; */
+        width: 260px;
+    }
+    #countdown {
+        font-size: 51px; /* Розмір шрифту для таймера */
+    }
+    #order-form h2 {
+        font-size: 18px;
+    }
+
+    #orderForm input,
+    #orderForm button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
