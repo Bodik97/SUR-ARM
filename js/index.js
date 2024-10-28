@@ -72,6 +72,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('orderForm');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        window.location.href = 'confirmation.html';
+    });
+    
+});
 
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        // Page is visible, reinitialize any necessary state
+        console.log('Page is visible');
+    }
+});
 
+if ('onfreeze' in document) {
+    document.addEventListener('freeze', function() {
+        // Page is being frozen (moved to bfcache)
+        console.log('Page is being frozen');
+    });
+
+    document.addEventListener('resume', function() {
+        // Page is being resumed from bfcache
+        console.log('Page is being resumed');
+    });
+}
 
