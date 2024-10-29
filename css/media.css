@@ -29,6 +29,7 @@
     .icon {
         margin-bottom: 10px;
     }
+    
     .advantages-list {
         flex-direction: column;
         align-items: center;
@@ -103,6 +104,9 @@
     }
     #time-labels span{
         font-size: 26px; /* Розмір тексту підписів */
+    }
+    .add-product_description {
+        display: none;
     }
     .title {
         font-size: 1.2em; /* Ще більше зменшити заголовок для дуже малих екранів */

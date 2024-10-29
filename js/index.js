@@ -101,3 +101,103 @@ if ('onfreeze' in document) {
     });
 }
 
+// document.addEventListener('DOMContentLoaded', function() {
+    const addProductCheckbox = document.getElementById('add-optical-sight');
+    const discountedPriceElement = document.querySelector('.discounted-price');
+    const originalPrice = 5899; // Original price of the main product
+    const additionalProductPrice = 900; // Price of the optical sight
+    let totalPrice = 5899;
+    let additionalValue = ' - ';
+
+
+
+    addProductCheckbox.addEventListener('change', function() {
+        totalPrice = originalPrice;
+        if (this.checked) {
+            additionalValue = ' + '
+            totalPrice += additionalProductPrice;
+        }
+        // Update the price displayed in the main order section
+        // You'll need to add an id or class to the main price element to select it here
+        document.querySelector('.order-price__new2 .price-value').textContent = totalPrice + 'грн';
+    });
+// });
+
+const TOKEN = "7872932457:AAGFCkJlFRBvKav1uA8zfiKRd1bKMf9TETk";
+const CHAT_ID = "1067816217";
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+const success = document.getElementById('success');
+
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nameField = this.name;
+    const phoneField = this.phone;
+    const priceField = totalPrice
+    const optValue = additionalValue
+
+    const namePattern = /^[A-Za-zА-Яа-яЁёІіЇїЄє\s]+$/;
+    const phonePattern = /^(\+?380|0)\d{9}$/;
+
+    // Validate fields
+    if (!namePattern.test(nameField.value)) {
+        alert('Будь ласка, введіть тільки букви в полі "Імя".');
+        return;
+    }
+
+    if (!phonePattern.test(phoneField.value)) {
+        alert('Будь ласка, введіть номер тел. у форматі "0XXXXXXXXX".');
+        return;
+    }
+
+    const message = `<b>Дай Боже вуйко! Замовлення прийшло!!!</b>\n` +
+                    `<b>Замовник: </b> ${nameField.value}\n` +
+                    `<b>Номер: </b> ${phoneField.value}\n` +
+                    `<b>Оптичний приціл: </b> ${optValue}\n` +
+                    `<b>Ціна: </b> ${priceField} грн`; 
+
+    // Send request using fetch
+    fetch(URI_API, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: CHAT_ID,
+            parse_mode: 'html',
+            text: message
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Message sent:', data);
+        nameField.value = "";
+        phoneField.value = "";
+        
+        window.location.href = "confirmation.html";
+    })
+    .catch(error => {
+        console.warn('Error:', error);
+    })
+    .finally(() => {
+        console.log("The end");
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const checkbox = document.getElementById('add-optical-sight');
+    const checkmark = checkbox.nextElementSibling;
+    
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            checkmark.style.animation = 'none';
+            setTimeout(() => {
+                checkmark.style.animation = 'checkmark 0.3s ease-in-out';
+            }, 10);
+        }
+    });
+});
