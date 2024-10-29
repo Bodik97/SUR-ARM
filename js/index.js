@@ -72,15 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('orderForm');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.getElementById('orderForm');
     
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        window.location.href = 'confirmation.html';
-    });
+//     form.addEventListener('submit', function(event) {
+//         event.preventDefault();
+//         window.location.href = 'confirmation.html';
+//     });
     
-});
+// });
 
 document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'visible') {
