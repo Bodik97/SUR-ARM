@@ -241,10 +241,10 @@
                 </div>
                 <form id="orderForm" method="post">
                     <!-- <label for="phone">Телефон:</label> -->
-                    <input type="text" id="phone" name="phone" placeholder="Телефон" required>
+                    <input type="number" id="phone" name="phone" placeholder="Телефон : 0731234567" pattern="^(\+?380|0)\d{9}$" required>
         
                     <!-- <label for="name">Ім’я:</label> -->
-                    <input type="text" id="name" name="name" placeholder="Ім’я" required>
+                    <input type="text" id="name" name="name" placeholder="Ім’я :  наприклад  Георгій" pattern="[A-ZА-ЯЁІЇЄ][a-zа-яёіїє]+" required>
         
                     <button type="submit">Оформити замовлення</button>
                 </form>
@@ -268,7 +268,7 @@
                     const phoneField = this.phone;
             
                     const namePattern = /^[A-Za-zА-Яа-яЁёІіЇїЄє\s]+$/;
-                    const phonePattern = /^\d{10}$/;
+                    const phonePattern = /^(\+?380|0)\d{9}$/;
             
                     // Validate fields
                     if (!namePattern.test(nameField.value)) {
