@@ -150,7 +150,8 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         return;
     }
 
-    const message = `<b>Дай Боже вуйко! Замовлення прийшло!!!</b>\n` +
+    const message = `<b>Замовлення HATSAN</b>\n` +
+                    `----------------------\n` +
                     `<b>Замовник: </b> ${nameField.value}\n` +
                     `<b>Номер: </b> ${phoneField.value}\n` +
                     `<b>Оптичний приціл: </b> ${optValue}\n` +

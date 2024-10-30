@@ -378,12 +378,27 @@ button:hover {
     color: #999;
     margin-right: 10px;
     font-size: 20px;
+
 }
+
 
 .discounted-price {
     font-weight: bold;
     color: #e74c3c;
     font-size: 36px;
+    text-shadow: 0 0 5px transparent; /* Початкове значення тіні */
+    animation: colorFade 3s ease-in-out infinite;
+
+}
+@keyframes colorFade {
+    0% {
+        color: #b62626; /* Початковий колір */
+        text-shadow: 0 0 5px transparent;
+    }
+    40% {
+        color: #ff4b4b; /* Кінцевий колір */
+        text-shadow: 1px 2px 5px #ff4b4b; 
+    }
 }
 
 .add-product_action label {
