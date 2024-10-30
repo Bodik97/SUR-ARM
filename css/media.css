@@ -100,7 +100,7 @@
         max-width: 200px;
     }
     #countdown {
-        font-size: 64px; /* Розмір шрифту для таймера */
+        font-size: 60px; /* Розмір шрифту для таймера */
     }
     #time-labels span{
         font-size: 26px; /* Розмір тексту підписів */
@@ -178,7 +178,7 @@
         width: 260px;
     }
     #countdown {
-        font-size: 51px; /* Розмір шрифту для таймера */
+        font-size: 50px; /* Розмір шрифту для таймера */
     }
     #order-form h2 {
         font-size: 18px;

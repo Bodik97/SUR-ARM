@@ -307,8 +307,7 @@ h2 {
 .main-content {
     display: flex;
     justify-content: center;  /* Центруємо по горизонталі */
-    align-items: center;      /* Центруємо по вертикалі */
-    min-height: 100vh;        /* Займаємо всю висоту екрану */
+    align-items: center;      /* Центруємо по вертикалі */       /* Займаємо всю висоту екрану */
 }
 
 /* Слайдер */
@@ -352,7 +351,7 @@ button.next {
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(240, 6, 6, 0.8);
 }
 .add-product {
     background-color: #f8f9fa;
@@ -361,6 +360,7 @@ button:hover {
 
 .add-product_content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
 }
@@ -373,12 +373,6 @@ button:hover {
 
 .add-product_details {
     flex: 1;
-}
-
-.add-product_details h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
 }
 
 .add-product_description {
