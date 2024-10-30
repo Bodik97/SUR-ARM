@@ -172,13 +172,11 @@ h2 {
     text-align: center;
     margin-bottom: 30px;
 }
-
 #time-labels span {
     margin: 0 17px; /* Відстань між підписами */
     font-size: 36px; /* Розмір тексту підписів */
     color: #333; /* Колір тексту підписів */
 }
-
 @keyframes tick {
     0% { transform: scale(1); }
     50% { transform: scale(0.95); } /* Збільшує цифри під час зміни */
@@ -221,7 +219,6 @@ h2 {
     transition: background 0.3s ease, transform 0.3s ease; /* Плавний перехід при наведенні */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Тінь */
 }
-
 .order-button:hover {
     background: linear-gradient(45deg, #f3edef, #b90404); /* Зміна градієнту при наведенні */
     transform: scale(1.05); /* Легке збільшення */
@@ -235,21 +232,10 @@ h2 {
     padding: 30px 20px;
     text-align: center;
 }
-
-/* .features-section h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 30px;
-    font-family: 'Arial', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-} */
-
 .features-list {
     list-style: none;
     padding: 0;
 }
-
 .features-list li {
     display: flex;
     align-items: center;
@@ -288,21 +274,11 @@ h2 {
     color: #555;
 }
 
-
 .slider-section {
     text-align: center;
     padding: 20px 20px;
     background-color: #f4f4f9;
 }
-
-/* .slider-section h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    text-transform: uppercase;
-} */
-
 
 .main-content {
     display: flex;
@@ -376,7 +352,7 @@ button:hover {
 }
 
 .add-product_description {
-    font-size: 16px;
+    font-size: 20px;
     color: #666;
     margin-bottom: 15px;
 }
@@ -401,12 +377,13 @@ button:hover {
     text-decoration: line-through;
     color: #999;
     margin-right: 10px;
+    font-size: 20px;
 }
 
 .discounted-price {
     font-weight: bold;
     color: #e74c3c;
-    font-size: 20px;
+    font-size: 36px;
 }
 
 .add-product_action label {
@@ -734,12 +711,6 @@ button:hover {
 #orderForm button:active {
     transform: translateY(0);
 }
-
-/* @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-} */
 
 #order-form h2 {
     animation: pulse 2s infinite;
